@@ -46,3 +46,8 @@ set localecho
 
 # `Enter`
 ```
+
+## How to use NNGS
+
+Reference:  
+[通信対戦について](http://www.computer-go.jp/gifu2005/regulations/communication.html)  
