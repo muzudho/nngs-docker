@@ -35,6 +35,11 @@
 #include "result.h"
 #include "cmd.h"
 
+int getopt(int argc, char * const argv[],
+           const char *optstring);
+extern char *optarg;
+extern int optind, opterr, optopt;
+
 #ifndef DEFAULT_MEAN_START
 #define DEFAULT_MEAN_START 26.5
 #endif

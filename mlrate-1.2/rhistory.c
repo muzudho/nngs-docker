@@ -39,6 +39,11 @@
 #undef xdbm_next
 #include "hdbm.h"
 
+int getopt(int argc, char * const argv[],
+           const char *optstring);
+extern char *optarg;
+extern int optind, opterr, optopt;
+
 #define USAGE "Usage: %s -i <rdbm>|-g <player>|-d <player> <hdbm>\n"
 
 #define SECSPERDAY (24 * 60 * 60)

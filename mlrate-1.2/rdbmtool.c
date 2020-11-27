@@ -26,6 +26,11 @@
 #include "rdbm.h"
 #include "error.h"
 
+int getopt(int argc, char * const argv[],
+           const char *optstring);
+extern char *optarg;
+extern int optind, opterr, optopt;
+
 #define USAGE "%s -d <dbname> [-g name] [-r name] [-l]\n"
 
 int

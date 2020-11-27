@@ -39,6 +39,11 @@
 #include <string.h>
 #include "error.h"
 
+int getopt(int argc, char * const argv[],
+           const char *optstring);
+extern char *optarg;
+extern int optind, opterr, optopt;
+
 #define INITSIZE     32
 #define BUFSIZE    1024
 #define DELIM    " \t\n\r"
