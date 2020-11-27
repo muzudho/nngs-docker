@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  nngs:
+    build: .
+
+    # 起動しっぱなしにします。
+    tty: true
+    # 起動させ続ける Hack です。
+    command: bash -c "bash /usr/local/bin/docker-entrypoint.sh && /bin/bash"
+
+    environment:
+      # Git hub にアクセスできるユーザー名、Eメールを環境変数に指定してください。
+      - NNGS_GIT_USER_NAME
+      - NNGS_GIT_USER_EMAIL
+
+    expose:
+#      - "6969"
+      - "9696"
+    ports:
+      - "6969:6969"
+      - "9696:9696"
+    volumes:
+      # ログ・ファイルの出力先です。あなたの環境のパスに合わせてください。
+      - C:/Users/むずでょ/Documents/shared/nngs:/root/go/nngssrv/stats
