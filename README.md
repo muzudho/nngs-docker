@@ -23,9 +23,16 @@ set NNGS_GIT_USER_EMAIL=yourname@example.com
 
 # Run.
 docker-compose up -d --build
+```
 
+## Option
+
+```shell
 # If you look at the log.
 docker-compose logs -f
+
+# Enter a docker container.
+docker exec -it nngs_nngs_1 bash
 ```
 
 ### Connect to the NNGS (Windows)

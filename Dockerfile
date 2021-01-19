@@ -43,4 +43,5 @@ RUN make install
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # Log file
-WORKDIR /root/go/nngssrv/stats
+WORKDIR /root/go/nngs/nngssrv/stats
+RUN touch logfile
