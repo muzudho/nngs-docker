@@ -42,6 +42,38 @@ RUN make install
 # Script at launch
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-# Log file
+# Copy Data
+WORKDIR /root/go/nngs/nngssrv
+RUN cp -R /app/nngs/data/* .
+
+# Create file
 WORKDIR /root/go/nngs/nngssrv/stats
 RUN touch logfile
+
+WORKDIR /root/go/nngs/nngssrv/lists
+#COPY admin.default admin
+#COPY badname.default badname
+#COPY ban.default ban
+#COPY index.default index
+RUN touch ban
+
+#WORKDIR /root/go/nngs/nngssrv/help
+#RUN touch commands
+
+WORKDIR /root/go/nngs/nngssrv/ladder
+#COPY ladder9.example ladder9
+#COPY ladder19.example ladder19
+RUN touch ladder9
+RUN touch ladder19
+
+WORKDIR /root/go/nngs/nngssrv/players/a
+RUN touch admin
+
+WORKDIR /root/go/nngs/nngssrv/messages
+#COPY admotd.default admotd
+#COPY login.default login
+#COPY logout.default logout
+#COPY motd.default motd
+#COPY unregistered.default unregistered
+#COPY welcome.default welcome
+RUN touch login
