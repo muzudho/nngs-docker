@@ -21,7 +21,11 @@ set COMPOSE_PROJECT_NAME=NNGS
 set NNGS_GIT_USER_NAME=yourname
 set NNGS_GIT_USER_EMAIL=yourname@example.com
 
+# Run.
 docker-compose up -d --build
+
+# If you look at the log.
+docker-compose logs -f
 ```
 
 ### Connect to the NNGS (Windows)

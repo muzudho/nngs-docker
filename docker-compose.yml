@@ -21,4 +21,4 @@ services:
       - "9696:9696"
     volumes:
       # ログ・ファイルの出力先です。あなたの環境のパスに合わせてください。
-      - C:/Users/むずでょ/Documents/shared/nngs:/root/go/nngssrv/stats
+      - C:/Users/むずでょ/Documents/shared/nngs/stats:/root/go/nngssrv/stats
