@@ -11,55 +11,16 @@ I changed No Name Go Server (NNGS) 1.1.22  to Docker.
   * [Source forge / No Name Go Server(NNGS)](https://sourceforge.net/projects/nngs/files/nngs/nngs-1.1.22/)
   * Or this /downloads directory.
 
-## Run (Windows)
+## Documents
 
-```shell
-# Option.
-set COMPOSE_PROJECT_NAME=NNGS
-
-# Please rewrite it in your git hub account.
-set NNGS_GIT_USER_NAME=yourname
-set NNGS_GIT_USER_EMAIL=yourname@example.com
-
-# Run.
-docker-compose up -d --build
-```
-
-## Option
-
-```shell
-# If you look at the log.
-docker-compose logs -f
-
-# Enter a docker container.
-docker exec -it nngs_nngs_1 bash
-```
-
-### Connect to the NNGS (Windows)
-
-Please use a telnet.  
-
-Install a telnet:  
-[WindowsのTelnetクライアントの使い方 (1/2)](https://www.atmarkit.co.jp/ait/articles/0207/06/news002.html)  
-
-```shell
-# (Step 1)
-telnet localhost 9696
-```
-
-Please localecho on, if it off.  
-
-How to localecho on:  
-[telnetコマンドを実行しても何も返ってこない](https://teratail.com/questions/52543)  
-
-```shell
-# (Step 2) Please push `[Ctrl] + "]"` key.
-
-# (Step 3)
-set localecho
-
-# (Step 4) Please push `[Enter]` key.
-```
+* Install
+  * [インストール方法](./doc/installation/install.md)
+* Run
+  * サーバーの
+    * [開始](./doc/run/start-server.md)
+  * クライアント側からの
+    * [開始（接続）](./doc/run/start-from-client.md)
+    * [停止（切断）](./doc/run/stop-from-client.md)
 
 ## How to use NNGS
 
