@@ -36,44 +36,45 @@ RUN cp /app/mlrate/libmlr.a /app/mlrate/src/libmlr.a
 # Build a NNGS
 WORKDIR /app/nngs
 RUN ln -s ../mlrate mlrate
-RUN ./configure --prefix=$HOME/go/nngs/
+# /app/nngs の下に nngs を入れることにする☆（＾～＾） 絶対パスでの指定が必要☆（＾～＾）？
+RUN ./configure --prefix=/app/nngs
 RUN make install
 
 # Script at launch
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-# Copy Data
-WORKDIR /root/go/nngs/nngssrv
-RUN cp -R /app/nngs/data/* .
+# Copy data
+RUN cp -R /app/nngs/data/* /app/nngs/share/nngssrv
 
-# Create file
-WORKDIR /root/go/nngs/nngssrv/stats
+# `$prefix/nngssrv/stats/logfile` ファイルを見に行くようにハードコーディングされている？
+WORKDIR /app/nngs/nngssrv/stats
 RUN touch logfile
 
-WORKDIR /root/go/nngs/nngssrv/lists
-#COPY admin.default admin
-#COPY badname.default badname
-#COPY ban.default ban
-#COPY index.default index
-RUN touch ban
+# Rename files
+WORKDIR /app/nngs/share/nngssrv/lists
+RUN mv admin.default admin
+RUN mv badname.default badname
+RUN mv ban.default ban
+RUN mv index.default index
+# RUN touch ban
 
-#WORKDIR /root/go/nngs/nngssrv/help
+#WORKDIR /app/nngs/share/nngssrv/help
 #RUN touch commands
 
-WORKDIR /root/go/nngs/nngssrv/ladder
-#COPY ladder9.example ladder9
-#COPY ladder19.example ladder19
-RUN touch ladder9
-RUN touch ladder19
+WORKDIR /app/nngs/share/nngssrv/ladder
+RUN mv ladder9.example ladder9
+RUN mv ladder19.example ladder19
+# RUN touch ladder9
+# RUN touch ladder19
 
-WORKDIR /root/go/nngs/nngssrv/players/a
+WORKDIR /app/nngs/share/nngssrv/players/a
 RUN touch admin
 
-WORKDIR /root/go/nngs/nngssrv/messages
-#COPY admotd.default admotd
-#COPY login.default login
-#COPY logout.default logout
-#COPY motd.default motd
-#COPY unregistered.default unregistered
-#COPY welcome.default welcome
-RUN touch login
+WORKDIR /app/nngs/share/nngssrv/messages
+RUN mv admotd.default admotd
+RUN mv login.default login
+RUN mv logout.default logout
+RUN mv motd.default motd
+RUN mv unregistered.default unregistered
+RUN mv welcome.default welcome
+# RUN touch login

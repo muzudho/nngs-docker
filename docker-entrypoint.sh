@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Run a NNGS
-cd /root/go/nngs/bin
+cd /app/nngs/bin
 ./nngssrv
