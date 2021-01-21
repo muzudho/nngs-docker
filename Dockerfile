@@ -56,7 +56,8 @@ WORKDIR /app/nngs/nngssrv/stats
 RUN touch logfile
 
 # Rename files
-WORKDIR /app/nngs/share/nngssrv/lists
+# WORKDIR /app/nngs/share/nngssrv/lists
+WORKDIR /app/nngs/nngssrv/lists
 RUN mv admin.default admin
 RUN mv badname.default badname
 RUN mv ban.default ban
@@ -66,16 +67,19 @@ RUN mv index.default index
 #WORKDIR /app/nngs/share/nngssrv/help
 #RUN touch commands
 
-WORKDIR /app/nngs/share/nngssrv/ladder
+# WORKDIR /app/nngs/share/nngssrv/ladder
+WORKDIR /app/nngs/nngssrv/ladder
 RUN mv ladder9.example ladder9
 RUN mv ladder19.example ladder19
 # RUN touch ladder9
 # RUN touch ladder19
 
-WORKDIR /app/nngs/share/nngssrv/players/a
+# WORKDIR /app/nngs/share/nngssrv/players/a
+WORKDIR /app/nngs/nngssrv/players/a
 RUN touch admin
 
-WORKDIR /app/nngs/share/nngssrv/messages
+# WORKDIR /app/nngs/share/nngssrv/messages
+WORKDIR /app/nngs/nngssrv/messages
 RUN mv admotd.default admotd
 RUN mv login.default login
 RUN mv logout.default logout
