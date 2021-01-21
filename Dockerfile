@@ -47,7 +47,6 @@ COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # とりあえずコピーだけやって、元のも残してみるぜ☆（＾～＾）
 WORKDIR /app/nngs/nngssrv
-# RUN cp -R /app/nngs/data/* /app/nngs/share/nngssrv/
 RUN cp -R /app/nngs/data/* /app/nngs/nngssrv/
 # RUN rm -rf /app/nngs/data
 
@@ -56,29 +55,22 @@ WORKDIR /app/nngs/nngssrv/stats
 RUN touch logfile
 
 # Rename files
-# WORKDIR /app/nngs/share/nngssrv/lists
 WORKDIR /app/nngs/nngssrv/lists
 RUN mv admin.default admin
 RUN mv badname.default badname
 RUN mv ban.default ban
 RUN mv index.default index
-# RUN touch ban
 
-#WORKDIR /app/nngs/share/nngssrv/help
+#WORKDIR /app/nngs/nngssrv/help
 #RUN touch commands
 
-# WORKDIR /app/nngs/share/nngssrv/ladder
 WORKDIR /app/nngs/nngssrv/ladder
 RUN mv ladder9.example ladder9
 RUN mv ladder19.example ladder19
-# RUN touch ladder9
-# RUN touch ladder19
 
-# WORKDIR /app/nngs/share/nngssrv/players/a
 WORKDIR /app/nngs/nngssrv/players/a
 RUN touch admin
 
-# WORKDIR /app/nngs/share/nngssrv/messages
 WORKDIR /app/nngs/nngssrv/messages
 RUN mv admotd.default admotd
 RUN mv login.default login
