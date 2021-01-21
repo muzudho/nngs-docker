@@ -38,13 +38,18 @@ WORKDIR /app/nngs
 RUN ln -s ../mlrate mlrate
 # /app/nngs の下に nngs を入れることにする☆（＾～＾） 絶対パスでの指定が必要☆（＾～＾）？
 RUN ./configure --prefix=/app/nngs
+# `make` して、また `make install` すんの☆（＾～＾）？
+RUN make
 RUN make install
 
 # Script at launch
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-# Copy data
-RUN cp -R /app/nngs/data/* /app/nngs/share/nngssrv
+# とりあえずコピーだけやって、元のも残してみるぜ☆（＾～＾）
+WORKDIR /app/nngs/nngssrv
+# RUN cp -R /app/nngs/data/* /app/nngs/share/nngssrv/
+RUN cp -R /app/nngs/data/* /app/nngs/nngssrv/
+# RUN rm -rf /app/nngs/data
 
 # `$prefix/nngssrv/stats/logfile` ファイルを見に行くようにハードコーディングされている？
 WORKDIR /app/nngs/nngssrv/stats
