@@ -45,10 +45,10 @@ RUN make install
 # Script at launch
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-# とりあえずコピーだけやって、元のも残してみるぜ☆（＾～＾）
+# Move data
 WORKDIR /app/nngs/nngssrv
 RUN cp -R /app/nngs/data/* /app/nngs/nngssrv/
-# RUN rm -rf /app/nngs/data
+RUN rm -rf /app/nngs/data
 
 # `$prefix/nngssrv/stats/logfile` ファイルを見に行くようにハードコーディングされている？
 WORKDIR /app/nngs/nngssrv/stats
