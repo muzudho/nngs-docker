@@ -23,5 +23,6 @@ services:
       # ログ・ファイルの出力先です。あなたの環境のパスに合わせてください。
       # ↓ ログファイルだけ外部へ
       - C:/Users/むずでょ/Documents/shared/nngs/nngssrv/stats:/app/nngs/nngssrv/stats
-      #- C:/Users/むずでょ/Documents/shared/nngs/nngssrv:/app/nngs/nngssrv
+      # ↓ Windowsへ '.index' ファイルを作ろうとして失敗するからマウントできない☆（＾～＾）？
+      # - C:/Users/むずでょ/Documents/shared/nngs/nngssrv:/app/nngs/nngssrv
       #- C:/Users/むずでょ/Documents/shared/nngs/share/nngssrv:/app/nngs/share/nngssrv

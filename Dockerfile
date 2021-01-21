@@ -13,6 +13,7 @@ COPY ./mlrate-1.2 /app/mlrate
 COPY ./nngs-1.1.22 /app/nngs
 
 # Get a cpuid2cpuflags.
+# Git Hub から取ってくるわけだが、こんなマイナーなパッケージに依存していていいのか☆（＾～＾）？
 WORKDIR /app/mlrate
 ARG NNGS_GIT_USER_NAME
 ARG NNGS_GIT_USER_EMAIL
