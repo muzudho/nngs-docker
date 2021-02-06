@@ -2,9 +2,11 @@
 
 Windows 以外でも使えると思いますが、 Windows での書き方で説明します。  
 
+* [ ] Docker を起動しておいてください。
+
 ```shell
 # Option.
-set COMPOSE_PROJECT_NAME=NNGS
+set COMPOSE_PROJECT_NAME=nngs
 
 # Please rewrite it in your git hub account.
 # mlrateを Git hub からダウンロードしてくるために使うぜ☆（＾～＾）

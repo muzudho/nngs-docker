@@ -1,3 +1,3 @@
 # Install
 
-Docker をインストールしておいてください。  
+* [ ] (Must) Docker

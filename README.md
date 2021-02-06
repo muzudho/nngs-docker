@@ -2,7 +2,7 @@
 
 I changed No Name Go Server (NNGS) 1.1.22  to Docker.
 
-## NNGS Original authors
+## Original NNGS information
 
 * [Authors](./nngs-1.1.22/AUTHORS)
 * [Thanks](./nngs-1.1.22/THANKS)
@@ -14,10 +14,10 @@ I changed No Name Go Server (NNGS) 1.1.22  to Docker.
 ## Documents
 
 * Install
-  * [インストール方法](./doc/installation/install.md)
+  * [Install](./doc/installation/install.md)
 * Run
-  * サーバーの
-    * [開始](./doc/run/start-server.md)
+  * Server side
+    * [Start](./doc/run/start-server.md)
   * クライアント側からの
     * [開始（接続）](./doc/run/start-from-client.md)
     * [停止（切断）](./doc/run/stop-from-client.md)
