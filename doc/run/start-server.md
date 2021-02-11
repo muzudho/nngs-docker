@@ -13,8 +13,10 @@ set COMPOSE_PROJECT_NAME=nngs
 set NNGS_GIT_USER_NAME=yourname
 set NNGS_GIT_USER_EMAIL=yourname@example.com
 
-# Run.
+# Run
 docker-compose up -d --build
+# After the second time
+# docker-compose up -d
 ```
 
 ## Option
