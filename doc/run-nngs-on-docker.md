@@ -1,4 +1,6 @@
-# サーバーの開始
+# Run NNGS on Docker
+
+## Start
 
 Windows 以外でも使えると思いますが、 Windows での書き方で説明します。  
 
@@ -19,7 +21,7 @@ docker-compose up -d --build
 # docker-compose up -d
 ```
 
-## Option
+Option:  
 
 ```shell
 # If you look at the log.
@@ -27,4 +29,10 @@ docker-compose logs -f
 
 # Enter a docker container.
 docker exec -it nngs_nngs_1 bash
+```
+
+## Stop
+
+```shell
+docker-compose down
 ```

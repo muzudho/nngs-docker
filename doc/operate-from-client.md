@@ -1,4 +1,4 @@
-# クライアント側からの開始（接続）
+# Start from Client
 
 Please use a telnet.  
 
@@ -22,4 +22,10 @@ How to localecho on:
 set localecho
 
 # (Step 4) Please push `[Enter]` key.
+```
+
+# Stop from Client
+
+```shell
+quit
 ```

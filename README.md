@@ -13,14 +13,15 @@ I changed No Name Go Server (NNGS) 1.1.22  to Docker.
 
 ## Documents
 
-* Install
-  * [Install](./doc/installation/install.md)
-* Run
-  * Server side
-    * [Start](./doc/run/start-server.md)
-  * クライアント側からの
-    * [開始（接続）](./doc/run/start-from-client.md)
-    * [停止（切断）](./doc/run/stop-from-client.md)
+* NNGS
+  * Set up
+    * [on Docker](./doc/set-up-nngs-on-docker.md)
+  * Run
+    * [on Docker](./doc/run-nngs-on-docker.md)
+* from Client
+  * [Start](./doc/operate-from-client.md)
+* References
+  * [References](./doc/references.md)
 
 ## How to use NNGS
 
