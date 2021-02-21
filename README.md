@@ -11,9 +11,9 @@ I changed No Name Go Server (NNGS) 1.1.22  to Docker.
   * [Source forge / No Name Go Server(NNGS)](https://sourceforge.net/projects/nngs/files/nngs/nngs-1.1.22/)
   * Or this /downloads directory.
 
-## Documents
+## This modified NNGS documents
 
-* NNGS
+* Modified NNGS
   * Set up
     * [on Docker](./doc/set-up-nngs-on-docker.md)
   * Run
