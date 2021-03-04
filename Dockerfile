@@ -24,6 +24,7 @@ RUN git clone https://github.com/mgorny/cpuid2cpuflags.git
 # Build a cpuid2cpuflags.
 WORKDIR /app/mlrate/cpuid2cpuflags
 RUN autoreconf --install
+RUN chmod +x configure
 RUN ./configure
 RUN make
 RUN cp /app/mlrate/cpuid2cpuflags/cpuid2cpuflags /usr/local/bin/cpuid2cpuflags
@@ -38,6 +39,7 @@ RUN cp /app/mlrate/libmlr.a /app/mlrate/src/libmlr.a
 WORKDIR /app/nngs
 RUN ln -s ../mlrate mlrate
 # /app/nngs の下に nngs を入れることにする☆（＾～＾） 絶対パスでの指定が必要☆（＾～＾）？
+RUN chmod +x configure
 RUN ./configure --prefix=/app/nngs
 # `make` して、また `make install` すんの☆（＾～＾）？
 RUN make
