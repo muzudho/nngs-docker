@@ -13,21 +13,24 @@ COPY ./mlrate-1.2 /app/mlrate
 COPY ./nngs-1.1.22 /app/nngs
 
 # Get a cpuid2cpuflags.
-# Git Hub から取ってくるわけだが、こんなマイナーなパッケージに依存していていいのか☆（＾～＾）？
-WORKDIR /app/mlrate
-ARG NNGS_GIT_USER_NAME
-ARG NNGS_GIT_USER_EMAIL
-RUN git config --global user.name "${NNGS_GIT_USER_NAME}"
-RUN git config --global user.email "${NNGS_GIT_USER_EMAIL}"
-RUN git clone https://github.com/mgorny/cpuid2cpuflags.git
-
-# Build a cpuid2cpuflags.
-WORKDIR /app/mlrate/cpuid2cpuflags
-RUN autoreconf --install
-RUN chmod +x configure
-RUN ./configure
-RUN make
-RUN cp /app/mlrate/cpuid2cpuflags/cpuid2cpuflags /usr/local/bin/cpuid2cpuflags
+# `cpuid2cpuflags` - Git Hub から取ってくるわけだが、こんなマイナーなパッケージに依存していていいのか☆（＾～＾）？
+# 無くても対局はできるみたいだから、いったん外すぜ（＾～＾）
+# +
+# | WORKDIR /app/mlrate
+# | ARG NNGS_GIT_USER_NAME
+# | ARG NNGS_GIT_USER_EMAIL
+# | RUN git config --global user.name "${NNGS_GIT_USER_NAME}"
+# | RUN git config --global user.email "${NNGS_GIT_USER_EMAIL}"
+# | RUN git clone https://github.com/mgorny/cpuid2cpuflags.git
+# |
+# | # Build a cpuid2cpuflags.
+# | WORKDIR /app/mlrate/cpuid2cpuflags
+# | RUN autoreconf --install
+# | RUN chmod +x configure
+# | RUN ./configure
+# | RUN make
+# | RUN cp /app/mlrate/cpuid2cpuflags/cpuid2cpuflags /usr/local/bin/cpuid2cpuflags
+# +
 
 # Build a MLrate
 WORKDIR /app/mlrate
