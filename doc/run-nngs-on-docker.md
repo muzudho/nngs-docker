@@ -34,6 +34,14 @@ docker-compose logs -f
 docker exec -it nngs_nngs_1 bash
 ```
 
+パスワードの設定の仕方:  
+
+```shell
+USAGE: password oldpassword newpassword
+```
+
+ただし管理者のパスワードの初回設定には不具合があって動かないので、ファイルを直接編集する必要がある。  
+
 ## Stop
 
 ```shell
