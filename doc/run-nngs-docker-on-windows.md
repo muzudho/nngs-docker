@@ -1,4 +1,4 @@
-# Run NNGS on Docker
+# Run NNGS-docker on Windows
 
 ## Start
 

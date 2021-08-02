@@ -1,4 +1,4 @@
-# Set up NNGS on Docker
+# Set up on Windows
 
 * [ ] (Must) Docker
   * Windows

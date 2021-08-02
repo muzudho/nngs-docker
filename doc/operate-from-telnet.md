@@ -1,4 +1,6 @@
-# Start from Client
+# Operate from Telnet
+
+## Start from Telnet
 
 Please use a telnet.  
 
@@ -24,7 +26,7 @@ set localecho
 # (Step 4) Please push `[Enter]` key.
 ```
 
-# Stop from Client
+## Stop from Telnet
 
 ```shell
 quit
